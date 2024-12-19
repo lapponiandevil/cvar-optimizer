@@ -1,0 +1,24 @@
+Riskfree 0.04
+
+A   Money		0.04	100		1
+
+S   lowrisk		0.05	0.2		0	1
+S   lowrisk2	0.06	0.4		0	1
+S   medrisk		0.07	0.6		0	1
+S   medrisk2	0.07	0.8		0	1
+S   highrisk	0.07	1.2		0	1
+S   highrisk2	0.08	1.4		0	1
+
+O	lowCK105	lowrisk		Call	1.05	1	0
+O	lowCK095	lowrisk		Call	0.95	1	0
+O	medCK108	medrisk		Call	1.08	1	0
+O	medCK092	medrisk		Call	0.92	1	0
+O	hiCK110		highrisk	Call	1.10	1	0
+O	hiCK090		highrisk	Call	0.90	1	0
+
+O	lowPK105	lowrisk		Put		1.05	1	0
+O	lowPK095	lowrisk		Put		0.95	1	0
+O	medPK108	medrisk		Put		1.08	1	0
+O	medPK092	medrisk		Put		0.92	1	0
+O	hiPK110		highrisk	Put		1.10	1	0
+O	hiPK090		highrisk	Put		0.90	1	0

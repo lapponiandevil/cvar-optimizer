@@ -1,0 +1,51 @@
+///// Main Options
+M_CVaR				=yes;
+M_CDaR				=yes;
+M_DD_				=yes;
+M_ADD				=yes;
+M_MDD				=yes;
+
+
+///// CVaR Input
+C_Scenarios			=1000;
+C_Terminal_time		=250.0/250.0;
+C_CVaR_ConfLev		=0.95;
+C_Limit_CVaR		=0.05;
+C_Increment			=0.05;
+C_FrontierSteps		=20;
+
+
+///// Drawdown Input
+D_CDaR_ConfLev		=0.95;
+D_TimeSteps			=20;
+
+///// Portfolio Restrictions
+//	Scenario Probability (sum P = 1)
+//	vector of size C_Scenarios [0,1] or "equal"
+R_Scenario_Prob		=equal;
+
+//	Transaction cost vector, value multiplied by
+//	portfolio value.
+//	Vector of size C_Scenarios or single value [0,1]
+R_Transaction_Cost	=0.005;
+
+//	Allowed Asset value Relative to
+//	Portfolio Value quotient
+//	vector of size C_Scenarios or single value [0,1]
+R_Relative_Value	=1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1 0.1;
+
+// Optional restrictions
+// 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2 0.2;
+//  0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15;
+
+
+//	Position Change Restriction vector
+//	vector of size C_Scenarios or single value
+R_Upper_Pos_Change	=10000;
+R_Lower_Pos_Change	=100;
+
+//	Actual Position Restriction vector
+//	vector of size C_Scenarios or single value
+R_upper_Pos_Bound	=12000;
+R_lower_Pos_Bound	=0;
+
